@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creat and delete text</title>
+    <!-- Css link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="mx-9 my-9">
+<h1 class="text-3xl">I creat text and delete</h1>
+
+
+<input class="bg-sky-600 btn text-2xl text-center text-white"   type="number"  placeholder="Please Input Number" name="" id="input-fild">
+<button id="get-btn" class="btn btn-primary text-2xl">Get Numta:</button>
+
+
+
+
+    <script>
+document.getElementById('get-btn').addEventListener('click', function(){
+    const inputFild = document.getElementById('input-fild');
+    const body = document.getElementsByTagName('body');
+    const inputString = inputFild.value;
+    const inputNumber = parseFloat(inputString);
+
+
+    const divNamta = document.createElement('div');
+    divNamta.innerHTML = `<h1> Namta: Ghor </h1>`;
+    body.appendChild(divNamta);
+
+    console.log(divNamta);
+    for(let i = 1; i <= 10; i++){
+        
+    }
+
+})
+
+    </script>
+    
+</body>
+</html>

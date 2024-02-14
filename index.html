@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Gem</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .text-style{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body class="">
+
+    <header>
+        <header>
+            <nav class="bg-sky-200 py-4 px-16 flex justify-between items-center flex-col md:flex-row mb-5">
+                <div class="">
+                    <h1 class="font-extrabold text-4xl">Interactive </h1>
+                    <p class="font-bold text-xl">Geometry Genius</p>
+                </div>
+               <div class="sm:mt-8"> <input type="text" id="invation-code" class=" btn  md:w-72 mr-0 pr-0 bg-green-50 border-purple-500 border-4 inline" placeholder="Enter Invitation Code ">
+                <button  class="px-8 btn btn-primary text-xl ml-0 inline" onclick="blogClick()">Blog</button></div>
+            </nav>
+        </header>
+    </header>
+       <main>
+        <!-- Main container -->
+        <div class="flex flex-col lg:flex-row">
+            <!-- Shape container -->
+            <div class="flex-1 grid grid-cal-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+                <!-- Traingle Card -->
+                <div class="card bg-base-100 shadow-xl m-2 hover:bg-purple-300 p-8">
+                    <figure>
+                        <img src="images/triangle.png" alt="Image of Tringle Shape">
+                    </figure>
+                    <div class="card-body text-center">
+                        <h2 class="text-2xl font-bold">Tringle</h2>
+                        <p>Area (A) = 0.5 X b X h </p>
+                       <span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline rounded-lg" id="triangle-base" placeholder="b"> <span class="ml-2">cm</span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline ml-2 rounded-lg" id="triangle-hight" placeholder="h"> <span class="ml-2">cm</span>
+                       </span>
+                       <p>Aria: <span id="triangle-area">0</span> cm<sup>2</sup></p>
+                       <button onclick="calculateTriangleArea()" class="btn btn-primary">Calculate</button>
+
+                    </div>
+
+                </div>
+
+
+                
+                <!-- Rectangle Card -->
+                <div class="card bg-base-100 shadow-xl m-2 hover:bg-purple-300 p-8">
+                    <figure>
+                        <img src="images/rectangle.png" alt="Image of Rectangle Shape">
+                    </figure>
+                    <div class="card-body text-center">
+                        <h2 class="text-2xl font-bold">Rectangle</h2>
+                        <p>Area (A) = w X l </p>
+                       <span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline rounded-lg" id="width-rectangle-fild" placeholder="w"> <span class="ml-2">cm</span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline ml-2 rounded-lg" id="length-rectangle-fild" placeholder="l"> <span class="ml-2">cm</span>
+                       </span>
+                       <p>Aria: <span id="rectangle-area">0</span> cm<sup>2</sup></p>
+                       <button onclick="calculateRectangleArea()" class="btn btn-primary">Calculate</button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Parallelogram Card -->
+                <div class="card bg-base-100 shadow-xl m-2 hover:bg-purple-300 p-8">
+                    <figure>
+                        <img src="images/parallelogram.png" alt="Image of Tringle Shape">
+                    </figure>
+                    <div class="card-body text-center">
+                        <h2 class="text-2xl font-bold">Parallelogram</h2>
+                        <p>Area (A) =  b X h </p>
+                       <span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline rounded-lg" id="base-parallelogram-fild" placeholder="b"> <span class="ml-2">cm</span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline ml-2 rounded-lg" id="hight-parallelogram-fild" placeholder="h"> <span class="ml-2">cm</span>
+                       </span>
+                       <p>Aria: <span id="parallelogram-area">0</span> cm<sup>2</sup></p>
+                       <button onclick="calculateParallelogramArea()" class="btn btn-primary">Calculate</button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Rhombus Card -->
+                <div class="card bg-base-100 shadow-xl m-2 hover:bg-purple-300 p-8">
+                    <figure>
+                        <img src="images/rhombus.png" alt="Image of Tringle Shape">
+                    </figure>
+                    <div class="card-body text-center">
+                        <h2 class="text-2xl font-bold">Rhombus</h2>
+                        <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub> </p>
+                       <span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline rounded-lg" id="rhombusD1-field" placeholder="d₁"> <span class="ml-2">cm</span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline ml-2 rounded-lg" id="rhombusD2-field" placeholder="d₂"> <span class="ml-2">cm</span>
+                       </span>
+                       <p>Aria: <span id="rhombus-area">0</span> cm<sup>2</sup></p>
+                       <button class="btn btn-primary" onclick="calculateRhombusArea()">Calculate</button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Pentagon Card -->
+                <div class="card bg-base-100 shadow-xl m-2 hover:bg-purple-300 p-8">
+                    <figure>
+                        <img src="images/pentagon.png" alt="Image of Tringle Shape">
+                    </figure>
+                    <div class="card-body text-center">
+                        <h2 class="text-2xl font-bold">Pentagon</h2>
+                        <p>Area (A) = 0.5 X p X b </p>
+                       <span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline rounded-lg" id="pentagon-P-Field" placeholder="p"> <span class="ml-2">cm</span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline ml-2 rounded-lg" id="pentagon-D-Field" placeholder="b"> <span class="ml-2">cm</span>
+                       </span>
+                       <p>Aria: <span id="pentagon-area">0</span> cm<sup>2</sup></p>
+                       <button onclick="calculatePentagonArea()" class="btn btn-primary">Calculate</button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Ellipse Card -->
+                <div class="card bg-base-100 shadow-xl m-2 hover:bg-purple-300 p-8">
+                    <figure>
+                        <img src="images/ellipse.png" alt="Image of Ellipse Shape">
+                    </figure>
+                    <div class="card-body text-center">
+                        <h2 class="text-2xl font-bold">Ellipse</h2>
+                        <p>Area (A) = π X a X b </p>
+                       <span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline rounded-lg" id="ellipse-a-Field" placeholder="a"> <span class="ml-2">cm</span>
+                        <input type="text" class="border bg-gray-200 text-xl w-16 text-center inline ml-2 rounded-lg" id="ellipse-B-Field" placeholder="b"> <span class="ml-2">cm</span>
+                       </span>
+                       <p>Aria: <span id="ellipse-area">0</span> cm<sup>2</sup></p>
+                       <button onclick="calculateEllipseArea()" class="btn btn-primary">Calculate</button>
+
+                    </div>
+
+                </div>
+
+
+                
+
+
+              
+
+
+
+            </div>
+
+            <!-- Area Calculator -->
+
+            <div class="w-[21.88rem] text-center">
+                <h2 class="text-4xl font-extrabold mt-5 border-yellow-300 rounded-3xl ">Area Calculator</h2>
+
+                <div id="calculation-entry">
+
+                </div>
+            </div>
+
+            
+        </div>
+       </main>
+
+       <footer class="bg-sky-200 py-28 pt-36 pb-7 text-center mt-16">
+       <p class="font-bold my-11">Contact Us: +880000-000000  | Email: as51073017@gmail.com</p>
+        <p>©2024 Ginarte Law. All Rights Reserved</p>
+    
+    </footer>
+
+    <script src="javaScript/isNan.js"></script>
+    <script src="javaScript/program.js"></script>
+</body>
+
+</html>
+
